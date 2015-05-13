@@ -25,6 +25,8 @@ WexnerCares - A guide and point of communication for patients that either have t
 
 -Personal Development
 
-Terra - Terra is a location-based content delivery system that turns physical buildings in to points of digital interaction. Through geofencing, Terra ties the physical coordinates of the area a building encompasses 
+Terra - Terra is a location-based content delivery system that turns physical buildings in to points of digital interaction. Through geofencing, Terra ties the physical coordinates of the area a building encompasses to online content. users then interact with this digital content when they are physically close to the building. This allows buildings and companies to develop applications that have physical context to interact with their customers on a more intimate level.
 
-Seymour - Apple Watch application that pulls up the five closest location based on the category and criteria the user selects. Users ask Seymour to display locations based on type, such as a gas station, restaurant, or bar, and Seymour pulls up the closest
+Seymour - Seymour is an Apple Watch application that pulls up the five closest location based on the category and criteria the user selects and provides unique pace by pace instructions. Unlike turn by turn directions, Seymour states how many paces in a particular direction the user must walk to get to their destination. Users simply glance at the direction they need to go, and an approximate measurement of the distance. When the direction changes, the user is notified on the watch.
+
+Fish Flop - Fish Flop is a casual game that was designed to be challenging and addictive.
