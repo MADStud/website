@@ -1,0 +1,196 @@
+<!--
+I'll be adding the logo shortly as well as a visual display of our work w descriptions or links. 
+
+we need big pictures for the background
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>App.Kitchen</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<script src="jquery-2.1.1.min.js"></script>
+	<!-- <link rel="stylesheet" href="day2.css">  -->
+	<script type="text/javascript" src="jquery.carouFredSel.js"></script>
+	
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+			font-family: Avenir, Helvetica, Sans-Serif;
+			font-size: 12px;
+			min-height: 800px;
+		}
+		#head{
+			/*border:1px dashed red;*/
+			height:60px;
+			margin-right: auto;
+			margin-left: auto;
+
+		}
+		ul{
+			list-style-type: none;
+			width:1050px;
+			padding: 0px;
+			margin: 0px;
+			margin-left: auto;
+			margin-right: auto;
+			background: white;
+			/*border: 1px dotted orange;*/
+		}
+		li{
+			display: inline-block;
+			padding-right:43px;
+			font-size: 24px;
+			height:60px;
+			line-height: 60px;
+			margin:0px;
+			padding-left: 43px;
+			
+		}
+		li:hover{
+			background-color:#005429;
+			opacity:.75;
+			color: white;
+		}
+		#pizzazz{
+			width:100%;
+			
+			background-image: url("bigpics/pic1.jpg");
+			background-size: 100% 100%;
+			min-height: 800px;
+
+		}
+		#text{
+			width:350px;
+			position: absolute;
+			right:75px;
+			top:250px;
+			background: white;
+			opacity: 0.85;
+			color: black;
+			padding: 10px;
+			box-shadow: 10px 10px 10px black;
+		}
+		footer{
+			padding: 10px;
+			background: rgb(200,200,200);
+		}
+	</style>
+</head>
+<body>	
+	<section id="head">
+		<img src="Cattail-Guy.gif" height="60" style="float:left; margin-left:100px;">
+		<ul >
+			<li style="float:right;">Home</li>
+			<li style="float:right;">See Our Work</li>
+			<li style="float:right;">FAQs</li>
+			<li style="float:right;" >Contact Us</li>
+		</ul>
+	</section>
+	<div id="pizzazz">
+		
+	</div>
+	<section id="text">
+		<div id="maincontent">
+			<center>
+				<h2>Top-class native iOS and Android mobile development services at a price you can trust</h2>
+				<h4>Whats cookin in our kitchen?</h4>
+			</center>
+			<p class="blurb">
+				We make apps like its our fukkin job yo
+			</p>
+		</div>
+	</section>
+	<footer>
+		<center>
+			<br/>
+			<a href="#">Email Us</a> | <a href="#">Contact Us</a><br>
+			Copyright © 2015 App.Kitchen<br>
+			<br/>
+		</center>
+	</footer>
+	<script type="application/javascript">
+		var imgarray = new Array();
+		imgarray[0] = 'http://thenextweb.com/wp-content/blogs.dir/1/files/2014/05/laptop-on-work-desk.jpg';
+		imgarray[1] = 'http://toolsandtoys.net/wp-content/uploads/2014/10/toolsandtoys_20141001_01.jpg';
+		imgarray[2] = 'http://www.ixtendo.com/wp-content/uploads/2012/02/photodune-5168723-working-desk-m.jpg';
+		imgarray[3] = 'http://cdn.designbeep.com/wp-content/uploads/2010/02/1.desk_1.png';
+		imgarray[4] = 'http://interstatehoodcleaning.com/wp-content/uploads/bg.jpg';
+		imgarray[5] = 'http://www.tigerchef.com/pics/userpics/iStock_000007875516Medium.jpg';
+
+		//preload images
+		var pathToImg=new Array()
+		for (i=0;i<imgarray.length;i++)
+		{
+		  pathToImg[i]=new Image();
+		  pathToImg[i].src=imgarray[i];
+		}
+
+		var inc = -1;
+
+		function setbackground(){
+		  window.setTimeout( "setbackground()", 6000);
+
+		  if (inc<imgarray.length-1)
+				inc++;
+			else
+				inc=0;
+		  newImage = pathToImg[inc].src;
+
+		  var bigslide = document.getElementById("pizzazz");
+		  FadeOut("pizzazz",newImage);
+		  
+		}
+
+		function FadeIn(id, newImage)
+		{
+		  var element=document.getElementById(id);
+		  if (element.timer) window.clearTimeout(element.timer); 
+		  var startMS = (new Date()).getTime();
+		  element.timer = window.setTimeout("ChangeOpacity('" + id + "',2500," + startMS + ",50,100,newImage)",1);
+
+		}
+
+		function FadeOut(id, newImage)
+		{
+		  var element=document.getElementById(id);
+		  if (element.timer) window.clearTimeout(element.timer); 
+		  var startMS = (new Date()).getTime();
+		  element.timer = window.setTimeout("ChangeOpacity('" + id + "',2500," + startMS + ",100,50,newImage)",1);
+		}
+
+		function ChangeOpacity(id,msDuration,msStart,fromO,toO,newImage)
+		{
+		  var element=document.getElementById(id);
+		  var opacity = element.style.opacity * 100;
+		  var msNow = (new Date()).getTime();
+		  opacity = fromO + (toO - fromO) * (msNow - msStart) / msDuration;
+
+		  if (opacity<50) {
+		  	SetOpacity(element,50);
+		  	element.style.backgroundImage = 'url("'+newImage+'")';
+		  	FadeIn(id);
+		  }else if (opacity>100)
+		    SetOpacity(element,100)
+		  else
+		  {
+		    SetOpacity(element,opacity);
+		    element.timer = window.setTimeout("ChangeOpacity('" + id + "'," + msDuration + "," + msStart + "," + fromO + "," + toO + ",'"+ newImage +"')",1);
+		  }
+		}
+
+		function SetOpacity(object,opacityPct)
+		{
+		  // IE.
+		  object.style.filter = 'alpha(opacity=' + opacityPct + ')';
+		  // Old mozilla and firefox
+		  object.style.MozOpacity = opacityPct/100;
+		  // Everything else.
+		  object.style.opacity = opacityPct/100;
+		}
+
+		window.onload = setbackground();
+		
+	</script>
+</body>
+</html>
