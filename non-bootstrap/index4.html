@@ -1,6 +1,5 @@
 <!--
 I'll be adding the logo shortly as well as a visual display of our work w descriptions or links. 
-
 we need big pictures for the background
 -->
 <!DOCTYPE html>
@@ -25,7 +24,6 @@ we need big pictures for the background
 			height:60px;
 			margin-right: auto;
 			margin-left: auto;
-
 		}
 		ul{
 			list-style-type: none;
@@ -57,7 +55,6 @@ we need big pictures for the background
 			background-image: url("bigpics/pic1.jpg");
 			background-size: 100% 100%;
 			min-height: 800px;
-
 		}
 		#text{
 			width:350px;
@@ -117,7 +114,6 @@ we need big pictures for the background
 		imgarray[3] = 'http://cdn.designbeep.com/wp-content/uploads/2010/02/1.desk_1.png';
 		imgarray[4] = 'http://interstatehoodcleaning.com/wp-content/uploads/bg.jpg';
 		imgarray[5] = 'http://www.tigerchef.com/pics/userpics/iStock_000007875516Medium.jpg';
-
 		//preload images
 		var pathToImg=new Array()
 		for (i=0;i<imgarray.length;i++)
@@ -125,32 +121,25 @@ we need big pictures for the background
 		  pathToImg[i]=new Image();
 		  pathToImg[i].src=imgarray[i];
 		}
-
 		var inc = -1;
-
 		function setbackground(){
 		  window.setTimeout( "setbackground()", 6000);
-
 		  if (inc<imgarray.length-1)
 				inc++;
 			else
 				inc=0;
 		  newImage = pathToImg[inc].src;
-
 		  var bigslide = document.getElementById("pizzazz");
 		  FadeOut("pizzazz",newImage);
 		  
 		}
-
 		function FadeIn(id, newImage)
 		{
 		  var element=document.getElementById(id);
 		  if (element.timer) window.clearTimeout(element.timer); 
 		  var startMS = (new Date()).getTime();
 		  element.timer = window.setTimeout("ChangeOpacity('" + id + "',2500," + startMS + ",50,100,newImage)",1);
-
 		}
-
 		function FadeOut(id, newImage)
 		{
 		  var element=document.getElementById(id);
@@ -158,14 +147,12 @@ we need big pictures for the background
 		  var startMS = (new Date()).getTime();
 		  element.timer = window.setTimeout("ChangeOpacity('" + id + "',2500," + startMS + ",100,50,newImage)",1);
 		}
-
 		function ChangeOpacity(id,msDuration,msStart,fromO,toO,newImage)
 		{
 		  var element=document.getElementById(id);
 		  var opacity = element.style.opacity * 100;
 		  var msNow = (new Date()).getTime();
 		  opacity = fromO + (toO - fromO) * (msNow - msStart) / msDuration;
-
 		  if (opacity<50) {
 		  	SetOpacity(element,50);
 		  	element.style.backgroundImage = 'url("'+newImage+'")';
@@ -178,7 +165,6 @@ we need big pictures for the background
 		    element.timer = window.setTimeout("ChangeOpacity('" + id + "'," + msDuration + "," + msStart + "," + fromO + "," + toO + ",'"+ newImage +"')",1);
 		  }
 		}
-
 		function SetOpacity(object,opacityPct)
 		{
 		  // IE.
@@ -188,7 +174,6 @@ we need big pictures for the background
 		  // Everything else.
 		  object.style.opacity = opacityPct/100;
 		}
-
 		window.onload = setbackground();
 		
 	</script>
