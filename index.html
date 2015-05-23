@@ -30,8 +30,8 @@
 			margin-right: 10%;
 		}
 		.actionbutton {
-
 		}
+
 		.jumbobuttons {
 			margin-left: 10%;
 			margin-right: 10%;
@@ -47,6 +47,11 @@
 			margin-right: 20%;
 			padding-bottom: 5%;
 		}
+
+	/*	.bottombuttons a{
+			height: 10%;
+		}*/
+
 		.finalfooter {
 			width: 100%;
 			background-color: #222;
@@ -80,14 +85,21 @@
 			width: 100% !important;
 /*			height: 100% !important;
 */		}
+
+.logo-mini{
+	height: 100px;
+}
+.logo-mini ul{
+	padding-top: 30px;
+}
 </style>
 </head>
 <body>
-	<div class="container">
+	<div class="container" id="top">
 
 		<div class="logo">
 			<center>
-				<img src="logosmall.png" style="max-width:100%;height:auto;">
+				<img src="logo-final.png" style="max-width:100%;height:auto;">
 			</center>
 		</div>
 
@@ -105,7 +117,7 @@
 
 				<div class="col-md-4 visible-md visible-lg">
 					<div class="jumbobuttons">
-						<button type="actionbutton" class="btn btn-success btn-lg btn-block">Get A Quote</button>
+						<a type="actionbutton" class="btn btn-success btn-lg btn-block" href="mailto:hello@app.kitchen?subject= I need to build an app! &body= Hey chefs, ">Get A Quote</a>
 						<button type="actionbutton" class="btn btn-success btn-lg btn-block">View Our Portfolio</button>
 					</div>
 				</div>
@@ -121,7 +133,7 @@
 		</div>
 
 
-		<div class="content">
+		<div class="content" id="about">
 			<div class="row">
 				<div class="col-md-5">
 					<center>
@@ -178,7 +190,7 @@
 		<hr><br>
 
 		<center>
-			<div class="team visible-lg visible-md visible-xs">
+			<div class="team visible-lg visible-md visible-xs" id="team">
 				<div class="row">
 					<div class="col-md-4">
 						<img src="img/claudius-sm.jpg" alt="Claudius" class="circle">
@@ -262,45 +274,45 @@
 		<br>
 
 		<div class="bottombuttons">
-			<button type="actionbutton" class="btn btn-success btn-lg btn-block">View Our Portfolio</button>
-			<button type="actionbutton" class="btn btn-success btn-lg btn-block">Get A Quote</button>
-		</div>
+			<a type="actionbutton" class="btn btn-success btn-lg btn-block" href="mailto:hello@app.kitchen?subject=I need to build an app! &body=Hey chefs, ">Get A Quote</a>
+<!-- 			<button type="actionbutton" class="btn btn-success btn-lg btn-block">View Our Portfolio</button>
+-->		</div>
 
-		<div class="row">
-			<div class="col-md-12 google-maps">
-				<!-- 	  				<img src="img/bottom.png" class="bottomimage" style="max-width:100%;height:auto;"> -->
-				<iframe width="600" height="450" frameborder="0" style="border:0"
-				src="https://www.google.com/maps/embed/v1/place?q=Columbus,+OH,+United+States&key=AIzaSyCU7rZMOqBsI87fpoZBSIxQPs0A9yLK6k0"></iframe>
-			</div>
-		</div>
-
+<div class="row">
+	<div class="col-md-12 google-maps">
+		<!-- 	  				<img src="img/bottom.png" class="bottomimage" style="max-width:100%;height:auto;"> -->
+		<iframe width="600" height="450" frameborder="0" style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?q=Columbus,+OH,+United+States&key=AIzaSyCU7rZMOqBsI87fpoZBSIxQPs0A9yLK6k0"></iframe>
 	</div>
+</div>
 
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">
-					<img alt="app.kitchen" src="...">
-				</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Get A Quote</a></li>
-				<li><a href="#">Team</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+</div>
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid logo-mini">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#top">
+				<img alt="app.kitchen" src="logo-mini-3.png">
+			</a>
 		</div>
-	</nav>
+		<ul class="nav navbar-nav">
+			<li><a href="#about">What We Are About</a></li>
+			<li><a href="mailto:hello@app.kitchen?subject=I need to build an app! &body=Hey chefs, ">Get A Quote</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="mailto:hello@app.kitchen?subject=">Contact</a></li>
+		</ul>
+	</div>
+</nav>
 
-	<footer class="footer">
-		<div class="finalfooter">
-			<center>
-				<p class="text-muted">Copyright 2015 app.kitchen</p>
-			</center>
-		</div>
-	</footer>
+<footer class="footer">
+	<div class="finalfooter">
+		<center>
+			<p class="text-muted" style="color:white;">Copyright 2015 app.kitchen</p>
+		</center>
+	</div>
+</footer>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </body>
 </html>
