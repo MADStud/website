@@ -1,350 +1,49 @@
-<html>
+<htmt>
 <head>
-	<title>app.kitchen</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	<!-- <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png"> -->
-	<link rel="icon" type="image/png" sizes="96x96" href="favicon.ico">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<style>
-
-		.btn-success{
-			background:#1CAD6B;
+	<title>app.kitchen - mobile development</title>
+	 <link rel="icon" href="favicon-96x96" type="image/png" sizes="96x96"> 
+	<style type="text/css">
+	body {
+		background-color: #E4EAF0;
+	}
+	.center {
+		width:100%;
+		margin-top:10em;
+	}
+	.hero {
+		width:60%;
+		margin:auto;
+		display: block;	
+	}
+	p {
+		font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: center;
+	}
+	@media screen and (max-width: 500px) {
+		p {
+			font-size: 11px;
 		}
-
-		hr {
-			border: 0;
-			border-bottom: 1px dashed #ccc;
-			background: #fff;
+		.hero {
+			width:80%;
 		}
-		.container {
-			margin-top: 25px;
+	}
+	@media screen and (min-width: 900px) {
+		p {
+			font-size: 18px;
 		}
-		.jumbotron {
-			background-color: #FFF;
-		}
-		.buttons {
-			margin-left: 20%;
-			margin-right: 20%;
-		}
-		.content {
-			margin-left: 10%;
-			margin-right: 10%;
-		}
-		.actionbutton {
-		}
-
-		.jumbobuttons {
-			margin-left: 10%;
-			margin-right: 10%;
-			margin-top: 45%;
-		}
-		.circle {
-			border-radius: 100px;
-			-webkit-border-radius: 100px;
-			-moz-border-radius: 100px;
-		}
-		.bottombuttons {
-			margin-left: 20%;
-			margin-right: 20%;
-			padding-bottom: 5%;
-		}
-
-	/*	.bottombuttons a{
-			height: 10%;
-		}*/
-
-		.finalfooter {
-			width: 100%;
-			background-color: #222;
-			padding-top: 20px;
-			padding-bottom: 10px;
-		}
-		.navbar {
-			margin-bottom: 0px;
-		}
-		.bottomimage {
-			padding-bottom: 15px;
-		}
-		.navbar-default {
-			border-color: transparent;
-			background-image: none;
-			background-repeat: none;
-			box-shadow: none;
-			border-radius: 0px;
-		}
-		.google-maps {
-			position: relative;
-			padding-bottom: 40%;
-			height: 0;
-			margin-bottom: 20px;
-			overflow: hidden;
-		}
-		.google-maps iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100% !important;
-		/*			height: 100% !important;*/		}
-
-		.logo-mini{
-			height: 100px;
-		}
-
-		.logo-mini ul{
-			padding-top: 30px;
-		}
-
-		.money{
-			color:green;
-		}
-
-		.bottombuttons .btn-block {
-			width: 50%;
-			margin-left: auto;
-			margin-right: auto;
-			display: block;
-		}
-		@media (max-width: 768px) {
-			.navbar.navbar-default{
-				height: 250px;
-				text-align: center;
-			}
-
-			/*.displayed-center {
-				display: block;
-				position: absolute;
-				margin-left: auto;
-				margin-right: auto
-			}*/
-			.bottombuttons .btn-block {
-				width: 100%;
-				margin-left: auto;
-				margin-right: auto;
-				display: block;
-			}
-
-		}
+	}
 	</style>
 </head>
 <body>
-	<div class="container" id="top">
-
-		<div class="logo">
-			<center>
-				<img src="logo-final.png" style="max-width:100%;height:auto;">
-			</center>
-		</div>
-
-		<hr>
-
-		<div class="subtitle">
-			<center>
-				<h2>Full Stack Mobile App Development for you and your business.</h2>
-			</center>
-		</div>
-
-		<div class="jumbotron">
-			<div class="row">
-				<div class="col-md-8"><img src="http://i.imgur.com/rSR1tQp.jpg" style="max-width:100%;height:auto;"></div>
-
-				<div class="col-md-4 visible-md visible-lg">
-					<div class="jumbobuttons">
-						<a type="actionbutton" class="btn btn-success btn-lg btn-block" href="mailto:hello@app.kitchen?subject=I need to build an app! &body=Hey chefs, ">Get A Quote</a>
-						<button type="actionbutton" class="btn btn-success btn-lg btn-block" id="portfolio">View Our Portfolio</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="row visible-xs visible-sm">
-				<br> <br>
-				<div class="buttons">
-					<a type="actionbutton" class="btn btn-success btn-lg btn-block" href="mailto:hello@app.kitchen?subject=I need to build an app! &body=Hey chefs, ">Get A Quote</a>
-					<button type="actionbutton" class="btn btn-success btn-lg btn-block">View Our Portfolio</button>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="content" id="about">
-			<div class="row">
-				<div class="col-md-5">
-					<center>
-						<img src="img/phones.jpg" style="max-width:100%;height:auto;border-radius: 10px;">
-					</center>
-				</div>
-				<div class="col-md-7">
-					<div class="copy">
-						<h3><i>Serving up</i> Complete Mobile Solutions</h3>
-						<p>We offer complete solutions for both iOS and Android platforms. We can develop web back-ends to manage your mobile application needs. Talk to us about what we can do for you. No mobile project is impossible.</p>
-					</div>
-				</div>
-			</div>
-
-			<br>
-
-			<div class="row">
-				<div class="col-md-5 col-md-push-7">
-					<center>
-						<img src="img/compassion.jpg" style="max-width:100%;height:auto;border-radius: 10px;">
-					</center>
-				</div>
-				<div class="col-md-7 col-md-pull-5">
-					<div class="copy">
-						<h3><i>Prepped with</i> Compassionate Communication</h3>
-						<p>Our team takes pride in fostering strong client relationships. We'd love to meet you for lunch to talk about your needs. Drop any of the chefs a line whenever you want to talk, professionally or casually. Our kitchen is your kitchen.</p>
-					</div>
-				</div>
-			</div>
-
-			<br>
-
-			<div class="row">
-				<div class="col-md-5">
-					<center>
-						<img src="img/oculus.jpg" style="max-width:100%;height:auto;border-radius: 10px;">
-					</center>
-				</div>
-				<div class="col-md-7">
-					<div class="copy">
-						<h3><i>Cooking with</i> Emerging Technologies</h3>
-						<p>We are a forward facing development firm that is contantly pursuing new technologies. Talk to us about how we can incorporate the latest technologies in your solution.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<br>
-
-		<center>
-			<h1>Our Head Chefs</h1>
-		</center>
-
-		<hr><br>
-		<center>
-			<div class="team visible-lg visible-md visible-xs" id="team">
-				<div class="row">
-				<div class="col-md-4">
-						<img src="img/stuart-sm.jpg" alt="Stuart" class="circle">
-						<h3><a href="mailto:stuart@app.kitchen" title="stuart@app.kitchen">Stuart Farmer</a></h3>
-						<p>stuart@app.kitchen</p>
-					</div>
-					<div class="col-md-4">
-						<img src="img/paul.png" alt="Paul" class="circle">
-						<h3><a href="mailto:paul@app.kitchen" title="paul@app.kitchen">Paul Cook</a></h3>
-						<p>paul@app.kitchen</p>
-					</div>
-					<div class="col-md-4">
-						<img src="img/allen-sm.jpg" alt="Allen" class="circle">
-						<h3><a href="mailto:allen@app.kitchen" title="allen@app.kitchen">Allen White</a></h3>
-						<p>allen@app.kitchen</p>
-						
-					</div>
-				</div>
-				<br><br>
-				<div class="row">
-					<div class="col-md-4 col-md-offset-2">
-						<img src="img/max-sm.jpg" alt="Max" class="circle">
-						<h3><a href="mailto:max@app.kitchen" title="max@app.kitchen">Max Buck</a></h3>
-						<p>max@app.kitchen</p>
-					</div>
-					<div class="col-md-4">
-						<img src="img/claudius-sm.jpg" alt="Claudius" class="circle">
-						<h3><a href="mailto:claudius@app.kitchen" title="claudius@app.kitchen">Claudius Mbemba</a></h3>
-						<p>claudius@app.kitchen</p>
-					</div>	
-				</div>
-			</div>
-
-			<div class="team visible-sm">
-				<div class="row">
-					<div class="col-xs-6">
-						<img src="img/stuart-sm.jpg" alt="Stuart" class="circle">
-						<h3><a href="mailto:stuart@app.kitchen" title="stuart@app.kitchen">Stuart Farmer</a></h3>
-						<p>stuart@app.kitchen</p>
-					</div>
-					<div class="col-xs-6">
-						<img src="img/paul.png" alt="Paul" class="circle">
-						<h3><a href="mailto:paul@app.kitchen" title="paul@app.kitchen">Paul Cook</a></h3>
-						<p>paul@app.kitchen</p>
-					</div>
-				</div>
-				<br><br>
-				<div class="row">
-					<div class="col-xs-6">
-						<img src="img/allen-sm.jpg" alt="Allen" class="circle">
-						<h3><a href="mailto:allen@app.kitchen" title="allen@app.kitchen">Allen White</a></h3>
-						<p>allen@app.kitchen</p>
-					</div>
-					<div class="col-xs-6">
-						<img src="img/max-sm.jpg" alt="Max" class="circle">
-						<h3><a href="mailto:max@app.kitchen" title="max@app.kitchen">Max Buck</a></h3>
-						<p>max@app.kitchen</p>
-					</div>
-					<br><br>
-					<div class="row">
-						<div class="col-xs-12">
-							<img src="img/claudius-sm.jpg" alt="Claudius" class="circle">
-							<h3><a href="mailto:claudius@app.kitchen" title="claudius@app.kitchen">Claudius Mbemba</a></h3>
-							<p>claudius@app.kitchen</p>
-						</div>
-					</div>
-				</div>
-			</center>
-
-			<br>
-
-			<div class="bottombuttons">
-				<a type="actionbutton" class="btn btn-success btn-lg btn-block" href="mailto:hello@app.kitchen?subject=I need to build an app! &body=Hey chefs, ">Get A Quote</a>
-				<!-- <button type="actionbutton" class="btn btn-success btn-lg btn-block">View Our Portfolio</button> -->
-			</div>
-
-			<div class="row">
-				<div class="col-md-12 google-maps">
-					<!-- 	  				<img src="img/bottom.png" class="bottomimage" style="max-width:100%;height:auto;"> -->
-					<iframe width="600" height="450" frameborder="0" style="border:0; z-index:0"
-					src="https://www.google.com/maps/embed/v1/place?q=Columbus,+OH,+United+States&key=AIzaSyCU7rZMOqBsI87fpoZBSIxQPs0A9yLK6k0"></iframe>
-					<div style="position: relative; width:100%; height:100%; z-index:1"></div>
-				</div>
-				
-			</div>
-		</div> 	<!-- <div class="container" id="top"> -->
-
-		<nav class="navbar navbar-default">
-			<div class="container-fluid logo-mini">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#top">
-						<img class="displayed-center" alt="app.kitchen" src="logo-mini-3.png">
-					</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="#about">What We Are About</a></li>
-					<li><a href="mailto:stuart@app.kitchen?subject=I need to build an app! &body=Hey chefs, ">Get A Quote</a></li>
-					<li><a href="#team">Team</a></li>
-					<li><a href="mailto:stuart@app.kitchen?subject=">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
-
-		<footer class="footer">
-			<div class="finalfooter">
-				<center>
-					<p class="text-muted" style="color:white;">Copyright 2015 app.kitchen</p>
-				</center>
-			</div>
-		</footer>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script type="text/javascript">
-			$("#portfolio").click(function(){
-				alert("Coming Soon!");
-			});
-		</script>
-	</body>
-	</html>
+	<div class="center">
+		<img class="hero" src="logo.png">
+		<p>coming soon</p>
+		<p>email us at <a href="mailto:hello@app.kitchen">hello@app.kitchen</a> to inquire</p>
+	</div>
+</body>
+</htmt>
